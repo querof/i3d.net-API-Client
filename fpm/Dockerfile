@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y software-properties-common language-pac
     && LC_ALL=en_US.UTF-8 add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y php7.4 php7.4-fpm php7.4-mysql php7.4-xml mcrypt php7.4-gd curl \
-       php7.4-curl php7.4-mbstring supervisor \
+       php7.4-curl php7.4-mbstring zip unzip php7.4-zip supervisor \
     && mkdir /run/php \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
