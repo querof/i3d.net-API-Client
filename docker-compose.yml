@@ -1,0 +1,28 @@
+version: "3"
+services:
+  nginx:
+      build:
+          context: ./nginx
+      ports:
+          - "8080:80"
+      volumes:
+          - ./app:/var/app
+  fpm:
+      build:
+          context: ./fpm
+      volumes:
+          - ./app:/var/app
+      expose:
+          - "9000"
+      environment:
+          - "DB_HOST=db"
+          - "DB_DATABASE=i3d"
+  db:
+      image: mariadb
+      ports:
+          - "3306:3306"
+      environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - MYSQL_DATABASE=i3Dpassword
+      volumes:
+          - ./database:/var/lib/mysql
