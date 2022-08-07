@@ -1,5 +1,18 @@
 {
-
+    "autoload": {
+        "psr-4": {
+            "App\\src\\": [
+                "i3d/src/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\test\\": [
+                "i3d/tests/"
+            ]
+        }
+    },
     "require": {
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.7",
