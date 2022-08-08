@@ -8,5 +8,5 @@ use i3D\src\api\v3\DTO\Session\User;
 
 interface SessionManagementInterface
 {
-    public function getUser():User;
+    public function getUser(): User;
 }

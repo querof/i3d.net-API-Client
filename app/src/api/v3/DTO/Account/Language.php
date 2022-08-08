@@ -16,9 +16,8 @@ class Language
 
     public function __construct(int $value)
     {
-        if(!in_array($value, [self::ENGLISH, self::DUTCH]))
-        {
-            throw new InvalidArgumentException('Invalid Language');
+        if (!in_array($value, [self::ENGLISH, self::DUTCH])) {
+            throw new InvalidArgumentException('Invalid Language: ' . $value);
         }
 
         $this->value = $value;
