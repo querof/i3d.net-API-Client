@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace i3d\src\api;
+namespace i3D\src\api;
 
 use i3D\src\api\v3\DTO\Session\User;
 

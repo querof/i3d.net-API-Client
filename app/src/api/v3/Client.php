@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace i3D\src\api\v3;
 
-use i3d\src\api\SessionManagementInterface;
+use i3D\src\api\SessionManagementInterface;
 use i3D\src\api\v3\DTO\Session\User;
 use i3D\src\api\v3\Factory\SessionUser;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
