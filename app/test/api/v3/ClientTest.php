@@ -40,7 +40,7 @@ class ClientTest extends TestCase
 
     public function testSuccessfullyGetSessionUser(): void
     {
-        $this->response->method('toarray')
+        $this->response->method('toArray')
             ->willReturn($this->getResponseContentArrayMock());
 
         $this->httpClientInterface->method('request')
