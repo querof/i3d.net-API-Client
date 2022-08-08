@@ -18,7 +18,7 @@ class Type
     {
         if(!in_array($value, [self::CONSUMER, self::BUSINESS]))
         {
-            throw new InvalidArgumentException('Invalid Account type');
+            throw new InvalidArgumentException('Invalid Account type: ' . $value);
         }
 
         $this->value = $value;
