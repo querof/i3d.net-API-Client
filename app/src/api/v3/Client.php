@@ -8,6 +8,7 @@ use i3D\src\api\SessionManagementInterface;
 use i3D\src\api\v3\DTO\Session\User;
 use i3D\src\api\v3\Factory\SessionUser;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
@@ -47,12 +48,14 @@ class Client implements SessionManagementInterface
                 ]
             );
 
-            return $this->sessionUserFactory->create((array)$response->getContent());
+            return $this->sessionUserFactory->create($response->toArray());
         } catch (
         ClientExceptionInterface |
+        DecodingExceptionInterface |
         RedirectionExceptionInterface |
         ServerExceptionInterface |
-        TransportExceptionInterface $exception
+        TransportExceptionInterface
+        $exception
         ) {
             throw new ClientException($exception->getMessage(), $exception->getCode(), $exception);
         }
