@@ -75,7 +75,8 @@ class Details
         ?int $agreeToc,
         ?int $agreeAup,
         int $agreeDpa,
-        int $isAllowedFlexMetal)
+        int $isAllowedFlexMetal
+    )
     {
         $this->accountType = $accountType;
         $this->companyName = $companyName;
