@@ -29,4 +29,3 @@ class Language
         return $this->value;
     }
 }
-
