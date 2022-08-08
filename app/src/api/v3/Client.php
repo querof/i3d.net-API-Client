@@ -49,10 +49,10 @@ class Client implements SessionManagementInterface
 
             return $this->sessionUserFactory->create((array)$response->getContent());
         } catch (
-            ClientExceptionInterface |
-            RedirectionExceptionInterface |
-            ServerExceptionInterface |
-            TransportExceptionInterface $exception
+        ClientExceptionInterface |
+        RedirectionExceptionInterface |
+        ServerExceptionInterface |
+        TransportExceptionInterface $exception
         ) {
             throw new ClientException($exception->getMessage(), $exception->getCode(), $exception);
         }

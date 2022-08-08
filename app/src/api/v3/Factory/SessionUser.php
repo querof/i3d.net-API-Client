@@ -29,7 +29,7 @@ class SessionUser
             $responseBody['requestIpCountryCode'],
             $this->createDetails($responseBody['details']),
             $this->createBillingDetails($responseBody['billingDetails'])
-            );
+        );
     }
 
     private function createDetails(array $details): Details

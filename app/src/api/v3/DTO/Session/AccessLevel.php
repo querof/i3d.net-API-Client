@@ -18,17 +18,16 @@ class AccessLevel
 
     public function __construct(int $value)
     {
-        if(
-            !in_array(
-                $value,
-                [
-                    self::GUEST,
-                    self::REGULAR_LOGGED_IN_USER,
-                    self::GAME_HOSTING_MANAGEMENT_ACCESS
-                ]
-            )
+        if (
+        !in_array(
+            $value,
+            [
+                self::GUEST,
+                self::REGULAR_LOGGED_IN_USER,
+                self::GAME_HOSTING_MANAGEMENT_ACCESS
+            ]
         )
-        {
+        ) {
             throw new InvalidArgumentException('Invalid Access level');
         }
 

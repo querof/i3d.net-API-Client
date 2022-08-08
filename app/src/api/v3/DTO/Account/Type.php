@@ -16,8 +16,7 @@ class Type
 
     public function __construct(int $value)
     {
-        if(!in_array($value, [self::CONSUMER, self::BUSINESS]))
-        {
+        if (!in_array($value, [self::CONSUMER, self::BUSINESS])) {
             throw new InvalidArgumentException('Invalid Account type: ' . $value);
         }
 

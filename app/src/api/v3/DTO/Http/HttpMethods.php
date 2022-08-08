@@ -18,10 +18,10 @@ class HttpMethod
 
     private string $value;
 
-    public function __construct(int $value)
+    public function __construct(string $value)
     {
-        if(
-            !in_array(
+        if (
+        !in_array(
             $value,
             [
                 self::HTTP_METHOD_GET,
@@ -30,9 +30,8 @@ class HttpMethod
                 self::HTTP_METHOD_DELETE
             ]
         )
-        )
-        {
-            throw new InvalidArgumentException('Invalid Http method');
+        ) {
+            throw new InvalidArgumentException('Invalid Http method' . $value);
         }
 
         $this->value = $value;
