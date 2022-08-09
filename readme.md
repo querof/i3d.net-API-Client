@@ -19,7 +19,9 @@ i3d.net technical challenge.
 
 ## Test
 
-vendor/phpunit/phpunit/phpunit tests/
+Inside the i3dnet-api-client_fpm container run:
+
+vendor/phpunit/phpunit/phpunit ./test
 
 
 ## Strategy for remaining activities:
