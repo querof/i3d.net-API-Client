@@ -43,6 +43,7 @@ Many things can be done to improve the code of course, but I want to mention a f
 - Implement unit test complete in all scenarios and services.
 - Implement a configuration interface: in order to have a proper place for parameter like the APIkey and base route. 
 - Improve the manage of exception control: In order to make an interpretation of the error details.
+- Implement valitador, in order to validate contracts and DTOs.
 - Perhaps some integration tests.
 
 
